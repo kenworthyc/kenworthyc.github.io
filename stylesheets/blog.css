@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+
+/* Color reference:
+-----background: #E1E0DD
+body background: #F1F2F0
+-----------text: #35342F
+-----------link: #5D2C9E
+--------visited: #463E66
+*/
+
+h1, h2, h4 {
+  font-family: Abril Fatface;
+}
+
+ol li {
+  text-align: justify;
+}
