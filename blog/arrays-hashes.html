@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <head>
+    <title>Arrays and Hashes</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  </head>
+
+    <header>
+      <h3>Caroline<br>Kenworthy</h3>
+      <nav>
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="index.html">blog</a></li>
+          <li><a href="#">projects</a></li>
+        </ul>
+      </nav>
+    </header>
+<section>
+  <h1>Listing in Ruby: Arrays and Hashes</h1>
+  <h4>11.14.2015</h4>
+    <article>
+        <p>
+          Arrays and hashes are some of the most useful ways to store data in Ruby. Read on for a basic idea of the differences between the two.
+        </p>
+      <h2>arrays!</h2>
+        <p>
+          Arrays are lists! In arrays, you can list all types of objects in Ruby; strings, integers, booleans, and other arrays are all valid array elements. In addition, the order of the elements is enmeshed with the array itself. <em>That there is an order</em> is an integral part of array-ness.
+        </p>
+        <p>
+          Ruby keeps track of all the elements in an array. Each element in an array corresponds to a number. They go like this:
+        </p>
+          <code>animal_array = [ cheetah, squirrel, ostrich ]</code>
+          <br/>
+          index numbers: <code>[ 0, 1, 2]</code>
+        <p>
+          Ruby links the first element in an array to 0. To point to 'cheetah' in animal_array, you could type <code>animal_array[0]</code>. For squirrel, <code>animal_array[1]</code>... and on and on, as long as your array goes.
+        </p>
+      <h2>hashes!</h2>
+        <p>
+          Hashes are lists too, but can keep information in more complex forms than arrays can. Each item in a hash is paired, and together they're commonly called a 'key-value pair'. Key-value pairs are uniquely useful because they allow each element to categorize and correspond to their pair.
+        </p>
+        <p>
+          Even better, the programmer can define every single item in a hash— meaning each and every key and value. Ruby's built-in system of indexing arrays is numerical, but its system of indexing hashes is created by the programmer.
+        </p>
+           <code>favorite_animal_foods = { cheetah: "gazelle", <br/>
+            squirrel: "acorn", <br/>
+            ostrich: "pizza" <br/>
+           }</code>
+        <p>
+          In the hash above, we could call any one of the elements, or the element's pair, as long as we know the name. If you know the right commands, Ruby will let you look through any one of these animals, and tell you what their preferred cuisine. That project would be for another article, but it shows why hashes may be useful.
+        </p>
+    </article>
+</section>
+    <footer>
+      <p>Caroline Kenworthy &copy; 2015</p>
+    </footer>
+</html>
