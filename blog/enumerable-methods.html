@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <title>VCS and git</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+</head>
+
+    <header>
+      <h3>Caroline<br>Kenworthy</h3>
+      <nav>
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="index.html">blog</a></li>
+          <li><a href="#">projects</a></li>
+        </ul>
+      </nav>
+    </header>
+<section>
+  <h1>Enumerables and Enumerable#map</h1>
+  <h4>11.20.2015</h4>
+  <article>
+    <h2>what are Enumerables?</h2>
+      <p>
+        To start, let's go over what Enumerables aren't:
+      </p>
+        <ul>
+          <li>not a type of object in Ruby (like strings, integers, or arrays)</li>
+          <li>not just one method you can call on an object</li>
+          <li></li>
+        </ul>
+      <p>
+        You might notice that word "enumerable", in English, parses as an adjective. "Enumerables" (which you read about in the Ruby docs) is actually a short way of talking about a noun: "Enumerable classes." To reformulate: Enumerables are classes in Ruby which are <em>able to be enumerated</em>. Enumerables encompass a set of classes in Ruby, which respond to set of predefined methods (most of which have to do with enumerateing... or counting).
+      </p>
+      <p>So... what are Enumerables again?</p>
+        <ul>
+          <li>an adjectival description of an object type which gathers smaller items (a 'collection class') in ruby</li>
+          <li>an adjective for collection classes which get access to a set of methods</li>
+          <li>those actions tend to count through the collection classes (e.g., enumerate them!)</li>
+        </ul>
+        <p>Now we'll look at one example of a method which Enumerables get to use.</p>
+    <h2>Enumerable#map and Enumerable#collect</h2>
+      <p>
+        Note: since Enumerables use limited list of methods, the header above an example of how you'd signify a general Enumerable method, rather than the specific destructive or non-destructive versions (<code>.map!</code> or <code>.map</code>).
+      </p>
+      <p>
+        The <code>.map</code> or <code>.collect</code> method iterates through each distinct member of a collection and alters each one. (The two methods are synonyms; you could use either if it makes your code more readable.) <code>.map</code> or <code>.collect</code> output is an array.
+      </p>
+      <p>
+        <code>.map</code> is excellent at taking an array and applying a new instruction to transform it. Of course, you have to provide the instruction in a code block (much as for <code>.each</code>). Here's an example:
+      </p>
+        <code>
+          arr = ["a", "b", "c", "d"] <br/>
+          => ["a", "b", "c", "d"] <br/>
+          arr.map { |letter| letter.upcase } <br/>
+          => ["A", "B", "C", "D"]
+        </code>
+      <p>
+        It's good to note that although <code>.each</code> acts the same way as <code>.map</code>, their outputs differ; <code>.each</code> more easily gathers information from an array, where as <code>.map</code> is better suited to altering the array.)
+      </p>
+
+  </article>
+</section>
+    <footer>
+      <p>Caroline Kenworthy &copy; 2015</p>
+    </footer>
+</html>
