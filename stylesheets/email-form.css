@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 
 /* Color reference:
@@ -31,7 +32,7 @@ body {
   background-color: #F1F2F0;
 }
 
-header, section, footer{
+header, footer{
   margin: 0 auto;
   text-align: center;
   width: 80%;
@@ -94,29 +95,49 @@ header>h3 {
   margin: 0px 30px 0px 30px;
 }
 
-section {
-  display: block;
-  padding: 10px 50px 10px 50px;
+.contact-form {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  color: #35342f;
 }
 
-section>h2 {
-  margin-top: 1%;
-  margin-bottom: 5%;
+.contact-form form {
+  margin: 0px auto 0px auto;
+  width: 80%;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  background-color: #8bb7b6;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 3px;
+}
+
+.contact-form input, textarea{
+  width: 75%;
+  height: 27px;
+  border: 1px solid #8bb7b6;
+  border-radius: 5px;
+  text-align: center;
+  overflow: scroll;
+  clear: both;
+}
+
+textarea {
+  height: 85px;
+  margin-bottom: 10px
+}
+
+#submit:hover {
+  background-color: #35342F;
+  color: #F1F2F0;
 }
 
 section p {
   text-align: justify;
-}
-
-.social-icons {
-  max-width: 350px;
-  min-width: 80px;
-  margin: 0 auto;
-}
-
-.social-icons img {
-  height: 60px;
-  padding: 5px 10px 5px 10px;
 }
 
 footer {
