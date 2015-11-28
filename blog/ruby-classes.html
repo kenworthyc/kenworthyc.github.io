@@ -25,7 +25,7 @@
   <article>
     <h2>have some class</h2>
       <p>
-        In Ruby, classes let you define various limits and behaviors of an Object you want to create. (Building on an understanding of methods in Ruby: classes contain certain methods that are useful to call on a kind of object, and those methods can interact to perform complex actions using one method call.) Classes look like this:
+        In Ruby, <strong>classes let you define various limits and behaviors of a type of Object</strong> you want to create. (Building on an understanding of methods in Ruby: classes contain certain methods that are useful to call on a kind of object, and those methods can interact to perform complex actions using one method call.) Classes look like this:
       </p>
       <pre><code>
       class Wallet
@@ -33,13 +33,13 @@
       end
       </code></pre>
       <p>
-        (In Ruby, class names are capitalized to distinguish them from variables or other objects.) Using the empty class above, let's make a smart-wallet. What would be some actions it'll need to, or kinds of useful information to display?
+        (In Ruby, class names are capitalized to distinguish them from variables or other objects.) Using the empty class above, let's make a smart-wallet. What would be some actions it'll need to perform, or useful information it could display?
       </p>
         <ul>
           <li>add or remove a card</li>
           <li>display relevant information about each card</li>
-          <li>display the number of cards (to see if one was lost)</li>
-          <li>the ability to add or spend cash</li>
+          <li>display the number of cards</li>
+          <li>add or spend cash</li>
         </ul>
       <p>
         Those are pretty good skills to teach our newfangled smart-wallet. Translated into Ruby, the 'add a card' instance method might look something like this:
@@ -48,14 +48,14 @@
       <pre><code>
       class Wallet
 
-        def add_card(type_of_card_str, cardholder_str, card_num, exp_date_str)
+        def add_card(card_name, cardholder, card_num, exp_date)
             list_of_cards = []
 
             new_card = {
-            Card: type_of_card_str,
-            Cardholder: cardholder_str,
+            Card: card_name,
+            Cardholder: cardholder,
             Number: card_num,
-            Expiration: exp_date_str
+            Expiration: exp_date
             }
 
             list_of_cards << new_card
@@ -66,11 +66,13 @@
       <p>
         Nice! We start with an empty array for our list of cards, and the template for each card is a hash containing the pertinent information.
         <br/>
-        But... hang on a minute. All the variables we've learned about so far (like <code>list_of_cards</code>) can't act both inside <em>and</em> outside methods. What about the other method, where we want to display <code>list_of_cards</code>?
+        But... hang on a minute. So far, all the variables we've learned about (like <code>list_of_cards</code>) can't function inside <em>and</em> outside methods. What about when we make the other method, to display <code>list_of_cards</code>?
       </p>
     <h2>instance variables save the daaaay</h2>
       <p>
-        In a normal Ruby method, a variable would be totally helpless here. Luckily, Ruby has special dispensations for classes. <strong>Instance variables</strong> are just like regular variables, but they're available inside and outside every method within a class. They're designated with an @. Now, with instance variables, we can do this!
+        In a normal Ruby method, a variable would be totally helpless here. Luckily, Ruby has special dispensations for classes. <strong>Instance variables</strong> work like regular variables, except they're available inside and outside any method within a class. (They're designated with an @.)
+        <br/>
+        Now, with instance variables, we can do this:
       </p>
       <pre><code>
       class Wallet
@@ -102,7 +104,7 @@
          Now the <code>display</code> method can access the <code>@list_of_cards</code> array to show all the cards we have. <code>Add</code> and <code>display</code> methods done!
       </p>
       <p>
-        Try declaring an instance variable for <code>cash</code>, and including it in the <code>display</code> method. Then keep going and make methods to add cash, spend it, or count it!
+        Your turn: try declaring an instance variable for <code>cash</code>, and including it in the <code>display</code> method. Then keep going and make methods to add cash, spend it, or count it!
       </p>
   </article>
 </section>
