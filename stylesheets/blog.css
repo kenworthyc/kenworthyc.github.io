@@ -14,8 +14,10 @@ h1, h2, h4 {
   font-family: Abril Fatface;
 }
 
-code {
-  text-align: justify;
+pre {
+  width: 85%;
+  display: inline-block;
+  text-align: left;
   background-color: #b7babc;
 }
 
