@@ -15,7 +15,9 @@ h1, h2, h4 {
 }
 
 code {
-  text-align: justify;
+  width: 85%;
+  display: inline-block;
+  text-align: left;
   background-color: #b7babc;
 }
 
