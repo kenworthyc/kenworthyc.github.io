@@ -11,12 +11,13 @@ link color: #3c8c4e
 */
 
 .proj-icons {
-  max-width: 350px;
+  max-width: 550px;
   min-width: 80px;
   margin: 0 auto;
 }
 
 .proj-icons img {
-  height: 60px;
-  padding: 5px 10px 5px 10px;
+  width: 30%;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
 }
