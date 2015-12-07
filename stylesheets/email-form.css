@@ -23,7 +23,7 @@ background: -ms-linear-gradient(top, #d7fae0 0%, #d7fae0 4%, #254d57 88%, #254d5
 background: linear-gradient(to bottom, #d7fae0 0%, #d7fae0 4%, #254d57 88%, #254d57 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7fae0', endColorstr='#254d57', GradientType=0 );
 
-  padding: 7% 20% 10% 20%;
+  padding: 7% 17% 150px 17%;
   font-family: Lora;
 }
 
@@ -62,7 +62,7 @@ header {
 
 nav li {
   display: inline-block;
-  width: 15%;
+  width: 8%;
   padding: 10px 5px 10px 5px;
   min-width: 35px;
 
@@ -72,10 +72,8 @@ nav li {
 }
 
 nav a:hover {
-  padding: 7px;
-  background-color: #c0e0d8;
   color: #296035;
-  border-radius: 10px;
+  -webkit-text-stroke: 1px #306d3d;
 }
 
 nav a:active {
