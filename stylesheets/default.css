@@ -22,7 +22,8 @@ background: -ms-linear-gradient(top, #d7fae0 0%, #d7fae0 4%, #254d57 88%, #254d5
 background: linear-gradient(to bottom, #d7fae0 0%, #d7fae0 4%, #254d57 88%, #254d57 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7fae0', endColorstr='#254d57', GradientType=0 );
 
-  padding: 7% 17% 150px 17%;
+
+  padding: 7% 10% 130px 10%;
   font-family: Lora;
 }
 
@@ -44,8 +45,8 @@ a:link {
   color: #3c8c4e;
 }
 
-section>a:visited {
-  color: #463E66;
+section>p>a:visited {
+  color: #26769b;
   text-decoration: line-through;
 }
 
