@@ -14,6 +14,15 @@ h1, h2, h4 {
   font-family: Abril Fatface;
 }
 
+p {
+  text-indent: 25px;
+}
+
+a:visited {
+  color: #26769b;
+  text-decoration: line-through;
+}
+
 pre {
   width: 85%;
   display: inline-block;
@@ -29,4 +38,8 @@ ol li {
   text-align: left;
   padding: .5em 1.5em 1em .5em;
   font-family: Lora;
+}
+
+figcaption {
+  font-size: 10pt;
 }
