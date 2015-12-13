@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <head>
+    <title>Regular Expressions</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  </head>
+
+    <header>
+      <h3>Caroline<br>Kenworthy</h3>
+      <nav>
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../projects/index.html">projects</a></li>
+          <li><a href="../email.html">email me</a></li>
+        </ul>
+      </nav>
+    </header>
+<section>
+  <h1>Regular Expressions: to regex or not to regex?</h1>
+  <h4>12.12.2015</h4>
+    <article>
+      <h2>what are regular expressions?</h2>
+        <p>
+          Conceptually, regular expressions derive partially from the study of computers, mathematics, and language: as you might intuit, they're an approximation of a word or a phrase. Specifically, regular expressions are approximations of a string with the capacity for complex parameters in searching through and comparing strings of text.
+        </p>
+        <p>
+          Practically, regexes are useful tools to match patterns within a given text input. They're almost indispensible because of <strong>their flexibility in finding patterns which are <em>similar</em>, not merely identical to, their set patterns.</strong> Regexes harness this capability by pairing its searching pattern (e.g. the precise string) with modifiers that tersely replace a long, annoying if-else chain (for every uppercase and lowercase character, say). They're found in many programming languages, and in JavaScript, they look like this:
+        </p>
+          <code>
+            var regex = /ExAmPlE/i <br>
+            // literal constructor = /pattern to search in text/modifier <br>
+            //  (i = case-insensitive)
+          </code>
+        <p>
+          The library of specificities you can set for your defined pattern is impressive, and <a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp">w3Schools has a good starter list</a> to get an idea of the kinds of patterns you can search for, as well as the modifiers on those patterns you can use.
+          <br>
+          Note: these are JavaScript Regexp docs, and different languages may have slightly different applications or syntactical parameters. For contrast, check out <a href="http://ruby-doc.org/core-2.2.0/Regexp.html">the Ruby Regexp docs</a>.
+        </p>
+      <h2>how about a popular regular expression?</h2>
+        <p>
+          Regular expressions are quite useful in the management of a contemporary website; if the site is at all interactive, it (literally) invites the user to interact with it, by mouse and keyboard, and those pesky keyboards are notoriously inaccurate (although... it <em>might</em> be user error). For instance, what if you wanted to get an email address to add a contact to your weekly email list, and want to be sure the address typed in is a valid email? Regular expressions to the rescue— a regex can scan an email in just one line:
+        </p>
+        <figure>
+          <code>
+            var email_validator = ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$
+          </code>
+        </figure>
+        <figcaption>Example thanks to <a href="http://www.regular-expressions.info/email.html">regular-expressions.info</a></figcaption>
+        <p>
+          Let's break it down.
+          <ol>
+            <li>
+              The regex signals the start and end of input, which correspond to the characters <code>^</code> and <code>$</code>, respectively. Next, the range (marked with brackets— almost like an array, no?) of possible characters in an email is A-Z, 0-9, and ._%+-.</li>
+            <li>
+              Next, outside the brackets, is a mandatory character— the at-sign noted by <code>+@</code>. Then there's another range of possible letters, numbers, and a period and dash, all of which are valid website addresses for an email host.</li>
+            <li>
+              Then there's another mandatory character outside the brackets: the period before a domain suffix. It looks like the way the at sign was added, but with one extra. <code>+\.</code> adds the period with an escape character. The escape character (\) is crucial! necessary! not optional!, since a period in a regex is a wildcard character (like *.doc for selecting all the docs in a folder from the command line).
+            </li>
+            <li>
+              Finally, there's the letter range for the domain, which can only be letters (like .com, .sy, or .info), and must be no less than two characters: hence, <code>[A-Z]{2,}</code>. The curly braces define the possible length of a string to match in the regex.
+            </li>
+          </ol>
+          Note: the author of this example doesn't include lowercase letter characters explicitly, as there's an option on the 'regex engine' (which compiles the regex code) for case-insensitivity, which can be flipped on. However, there's a way you can explicitly include lowercases— how do you think it might work?
+        </p>
+        <h3>bonus: regex vs. regexp?</h3>
+        <p>
+          Which is the 'correct' abbreviation? As <a href="https://stackoverflow.com/questions/3058246/which-is-the-correct-shorthand-regex-or-regexp">this entertainingly incensed StackOverflow thread</a> demonstrates, both are valid, although 'regex' is slightly more common. You'd be easily understood using either spelling.
+        </p>
+        <h4>Other Resources</h4>
+          <ul>
+            <li><a href="http://www.regular-expressions.info/quickstart.html">Regular-Expressions.info's immensely informative vocabulary crash course</a></li>
+            <li><a href="http://www.regular-expressions.info/javascript.html">Regular-Expressions.info on JavaScript's regexes</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">MDN's starter guide to JavaScript's regexes</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Regular_expression">Regular expression article on good old Wikipedia</a></li>
+          </ul>
+    </article>
+</section>
+    <footer>
+      <p>Caroline Kenworthy &copy; 2015</p>
+    </footer>
+</html>
