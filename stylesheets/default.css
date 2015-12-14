@@ -45,7 +45,7 @@ a:link {
   color: #3c8c4e;
 }
 
-section>p>a:visited {
+p>a:visited {
   color: #26769b;
   text-decoration: line-through;
 }
