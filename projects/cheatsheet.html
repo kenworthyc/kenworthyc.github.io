@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet.css">
+
+</head>
+<body>
+    <header>
+      <h3>Caroline<br/>Kenworthy</h3>
+      <nav>
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="../blog/index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="index.html">projects</a></li>
+          <li><a href="../email.html">email me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+        <h2>Iterators in Ruby and Javascript</h2>
+
+          <div class="ruby-arrays">
+            <h3>ruby arrays</h3>
+            <p>Note: these iterators are not destructive, and do not change the arrays directly.</p>
+            <div class="clearfix">
+              <div class="loop">
+                <h3>.each</h3>
+                <p>iterates through each element of an array, starting from the beginning.</p>
+                <code>
+                  arr = ['a', 'b', 'c', 1, 2, 3] <br>
+                  arr.each do |element| <br>
+                    print element * 2 <br>
+                  end <br>
+                  # => aabbcc246
+                </code>
+              </div>
+              <div class="loop">
+                <h3>.reverse_each</h3>
+                <p>accesses each element of an array, starting from the end.</p>
+                <code>
+                  arr = ['a', 'b', 'c', 1, 2, 3] <br>
+                  arr.reverse_each do |element| <br>
+                    print element <br>
+                  end <br>
+                  # => 321bca
+                </code>
+              </div>
+            </div>
+            <div class="loop">
+              <h3>.each_with_index</h3>
+              <p>accesses each array element along its index.</p>
+              <code>
+                arr = ['a', 'b', 'c', 1, 2, 3] <br>
+                arr.each_with_index do |element, index| <br>
+                  print element, "/", index, " " <br>
+                end <br>
+                # => a/0 b/1 c/2 1/3 2/4 3/5
+              </code>
+            </div>
+            <div class="loop">
+              <h3>.each_index</h3>
+              <p>accesses each index of an array (not its elements).</p>
+              <code>
+                arr = ['a', 'b', 'c', 1, 2, 3] <br>
+                arr.each_index do |index| <br>
+                  print index <br>
+                end <br>
+                # => 012345
+              </code>
+            </div>
+          </div>
+
+          <div class="ruby-hashes">
+            <h3>ruby hashes</h3>
+            <div class="clearfix">
+              <div class="loop">
+                <h3>.each</h3>
+                <p>accesses each element of a hash, starting from the beginning (and collecting each key and value in a separate array in its return value).</p>
+                <code>
+                  hsh = {'a' => 1, 'b' => 2, 'c' => 3} <br>
+                  hsh.each do |element| <br>
+                    print element * 2 <br>
+                  end <br>
+                  # => ["a", 1]["b", 2]["c", 3]
+                </code>
+              </div>
+              <div class="loop">
+                <h3>.each_key, .each value</h3>
+                <p>accesses each key OR value of a hash, starting from the beginning.</p>
+                <code>
+                  hsh = {'a' => 1, 'b' => 2, 'c' => 3} <br>
+                  hsh.each_key do |key| <br>
+                    print key * 2, ' ' <br>
+                  end <br>
+                  # => aa bb cc
+                </code>
+              </div>
+              <div class="loop">
+                <h3>.each_pair</h3>
+                <p>accesses each key-value pair in a hash, starting from the beginning.</p>
+                <code>
+                  hsh = {'a' => 1, 'b' => 2, 'c' => 3} <br>
+                  hsh.each_pair do |key, value| <br>
+                    puts key, ' is the key of ', value<br>
+                  end <br>
+                  # => a is the key of 1
+                  #  > b is the key of 2
+                  #  > c is the key of 3
+                </code>
+              </div>
+            </div>
+          </div>
+          <div class="javascript-arrays">
+            <h3>JavaScript arrays</h3>
+            <div class="clearfix">
+              <div class="loop">
+                <h3>for loop</h3>
+                <p>uses an incrementing counter which can apply to any array index</p>
+                <code>
+                  var arr = ['a', 'b', 'c', 1, 2, 3] <br>
+                  for (var i=0; i<6; i++) <br>
+                    console.log(arr[i]);<br>
+                  // > abc123
+                </code>
+
+              </div>
+              <div class="loop">
+                <h3>while loop</h3>
+                <p>performs a task while a condition evaluates to true</p>
+                <code>
+                  var arr = ['a', 'b', 'c', 1, 2, 3] <br>
+                  var i = 0; <br>
+                  do { <br>
+                  i += 1; <br>
+                  console.log(arr[i]);<br>
+                  } while (i < 3 ); <br>
+                  // > abc123
+                </code>
+              </div>
+            </div>
+          </div>
+          <div class="javascript-objects">
+            <div class="clearfix">
+              <h3>JavaScript objects</h3>
+              <div class="loop">
+                <h3>for..in statement</h3>
+                <p>iterates over properties within an indicated object</p>
+                <code>
+                  var obj = { a: 1, b: 2, c: 3} <br>
+                  var props = ""; <br>
+                  for (var property in obj) { <br>
+                    props += obj[property] + ", "; <br>
+                  } <br>
+                  console.log (props + "are properties of obj!"); <br>
+                  // > 1, 2, 3, are properties of obj!
+                </code>
+              </div>
+              <div class="loop">
+                <h3>for..of statement</h3>
+                <p><strong>This statement is in ECMA 6, but does NOT have broad browser support!</strong></p>
+                <p>iterates over values of properties within an indicated object</p>
+                <code>
+                  var obj = { a: 1, b: 2, c: 3} <br>
+                  var vals = ""; <br>
+                  for (var value of obj) { <br>
+                    vals += obj[value] + ", "; <br>
+                  } <br>
+                  console.log (vals + "are properties of obj!"); <br>
+                  // > 1, 2, 3, are properties of obj!
+                </code>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+      <p>Caroline Kenworthy &copy; 2015</p>
+    </footer>
+</body>
+</html>
