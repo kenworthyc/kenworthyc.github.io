@@ -15,7 +15,7 @@ h1, h2, h4 {
 }
 
 p a:visited {
-  color: #ea780e;
+  color: #FFCA85;
   text-decoration: line-through;
 }
 
@@ -44,5 +44,6 @@ ol li {
   text-align: left;
   padding: .25em;
   font-family: Lora;
+  color: #E38100;
 }
 
