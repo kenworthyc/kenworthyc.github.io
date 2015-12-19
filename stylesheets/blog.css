@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
-@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+
 
 
 /* Color reference:
@@ -11,19 +10,18 @@ body background: #F1F2F0
 */
 
 h1, h2, h4 {
-  font-family: Abril Fatface;
+  font-family: Fjalla One;
+  text-align: center;
 }
 
-p {
-  text-indent: 25px;
-}
-
-a:visited {
-  color: #23512d;
+p a:visited {
+  color: #FFCA85;
+  text-decoration: line-through;
 }
 
 pre {
   width: 90%;
+  padding: 7px;
   display: inline-block;
   text-align: left;
   background-color: #b7babc;
@@ -37,17 +35,15 @@ figcaption {
   font-size: 10pt;
 }
 
-article ul {
+article ul, p {
+  text-indent: 25px;
   text-align: left;
-}
-
-nav li {
-  text-align: center;
 }
 
 ol li {
   text-align: left;
-  padding: .5em 1.5em 1em .5em;
+  padding: .25em;
   font-family: Lora;
+  color: #E38100;
 }
 
