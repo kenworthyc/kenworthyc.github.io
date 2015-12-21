@@ -6,64 +6,66 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
   </head>
-
-    <header>
-      <h3 id="name-text">Caroline<br>Kenworthy</h3>
-      <nav>
-        <ul>
-          <li><a href="../index.html">home</a></li>
-          <li><a href="index.html">blog</a></li>
-          <li><a href="../about.html">about</a></li>
-          <li><a href="../projects/index.html">projects</a></li>
-          <li><a href="../email.html">email me</a></li>
-        </ul>
-      </nav>
-    </header>
-<section>
-  <h1>Functional vs. Object-Oriented Programming</h1>
-  <h4>12.6.2015</h4>
-    <article>
-        <p>
-          At the beginning of this week, I was asked to identify two similarities and two differences between Ruby and Javascript. I picked out a few syntax changes, then it occurred to me (having just learned about JavaScript objects)— they're both Object-Oriented!
-          <br/>
-          Well, turns out... nope.
-        </p>
-      <h2>object-oriented programming, oop!</h2>
-        <p>
-          In simple terms, object-oriented programming languages (OOPLs) are constructed of (and can construct) <strong>self-contained blocks of code which have collections of properties</strong>. In such a language, that's all an object <em>is</em>: a collection of properties (or attributes, or adjectives, if you prefer). Object-oriented languages are built of objects, and let the programmer build new objects.
-        </p>
-        <p>
-          Ruby is a great example of an OOPL: all of its interactive parts, like strings, numbers, methods, and classes, have a shared ancestor: the <code>Object</code> class. (And <code>Class</code> is a class too, but the purpose of any Class in Ruby is to create and define the properties of some new <code>Object</code>. (That's why the constructor looks like <code>ClassName.new()</code>— it's building a new instance, a new individual object, from the blueprint of <code>ClassName</code>.)
-        </p>
-          <code></code>
-        <p>
-          JavaScript has its own OOPL-like traits: one of the main tools for a JavaScript programmer is (ruby's Hash-like) <code>Object</code>. In addition, functions in JavaScript fulfill the description above: 'self-contained blocks of code which have collections of properties'. OOP can be an interesting and user-friendly way to conceive a programming language; there is a vast freedom the new programmer has over the actions and tasks to-be (assuming they get far enough to experiment with constructors, classes, and objects).
-        </p>
-      <h2>functional programming!</h2>
-        <p>
-          Functional programming languages, in opposition to OOPLs, assume a basic set of methods, input types, objects, and the like. Most importantly, they assume a global (although not entire) knowledge of available functions and their quirks. One purpose of any programming language is to allow the programmer to intuitively achieve a level of 'abstraction'; that is to say, the language can condense and express <em>what the computer has to do in the program</em> easily and simply.
-        </p>
-        <p>
-          As shown in the example below, a JavaScript programmer can simplify and condense the longer syntax of a <code>for</code> loop (which affects each element within the array it's passed) into the function forEach. Voilà: functional programming makes basic iterators simpler to type in.
-        </p>
-          <figure>
-            <pre>
-            <code>function forEach(array, action) {
-                  for (var i = 0; i < array.length; i++)
-                    action(array[i]);
-                }
-            </code>
-          </pre>
-            <figcaption>JavaScript's flair for functional programming:
-              <br/>forEach function <em>from <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">Eloquent Javascript, ed. 1</a></em>
-            </figcaption>
-          </figure>
-        <p>
-          In point of fact, JavaScript is a hybridized programming language that incorporates certain flexibilities of Object-Oriented Programming with the prescriptive nature of Functional Programming. I'm not nearly knowledgeable enough to say with certainty the dividing line between the two, but for now... I'll have to think of it as the best of both worlds.
-        </p>
-    </article>
-</section>
+<body>
+  <div id="gradient-bg">
+    <div id="body-bg">
+      <header>
+        <h3 id="name-text">Caroline<br>Kenworthy</h3>
+        <nav>
+          <a href="../index.html">home</a>
+          <a href="index.html">blog</a>
+          <a href="../about.html">about</a>
+          <a href="../projects/index.html">projects</a>
+        </nav>
+      </header>
+      <section>
+        <h1>Functional vs. Object-Oriented Programming</h1>
+        <h4>12.6.2015</h4>
+          <article>
+              <p>
+                At the beginning of this week, I was asked to identify two similarities and two differences between Ruby and Javascript. I picked out a few syntax changes, then it occurred to me (having just learned about JavaScript objects)— they're both Object-Oriented!
+                <br/>
+                Well, turns out... nope.
+              </p>
+            <h2>object-oriented programming, oop!</h2>
+              <p>
+                In simple terms, object-oriented programming languages (OOPLs) are constructed of (and can construct) <strong>self-contained blocks of code which have collections of properties</strong>. In such a language, that's all an object <em>is</em>: a collection of properties (or attributes, or adjectives, if you prefer). Object-oriented languages are built of objects, and let the programmer build new objects.
+              </p>
+              <p>
+                Ruby is a great example of an OOPL: all of its interactive parts, like strings, numbers, methods, and classes, have a shared ancestor: the <code>Object</code> class. (And <code>Class</code> is a class too, but the purpose of any Class in Ruby is to create and define the properties of some new <code>Object</code>. (That's why the constructor looks like <code>ClassName.new()</code>— it's building a new instance, a new individual object, from the blueprint of <code>ClassName</code>.)
+              </p>
+                <code></code>
+              <p>
+                JavaScript has its own OOPL-like traits: one of the main tools for a JavaScript programmer is (ruby's Hash-like) <code>Object</code>. In addition, functions in JavaScript fulfill the description above: 'self-contained blocks of code which have collections of properties'. OOP can be an interesting and user-friendly way to conceive a programming language; there is a vast freedom the new programmer has over the actions and tasks to-be (assuming they get far enough to experiment with constructors, classes, and objects).
+              </p>
+            <h2>functional programming!</h2>
+              <p>
+                Functional programming languages, in opposition to OOPLs, assume a basic set of methods, input types, objects, and the like. Most importantly, they assume a global (although not entire) knowledge of available functions and their quirks. One purpose of any programming language is to allow the programmer to intuitively achieve a level of 'abstraction'; that is to say, the language can condense and express <em>what the computer has to do in the program</em> easily and simply.
+              </p>
+              <p>
+                As shown in the example below, a JavaScript programmer can simplify and condense the longer syntax of a <code>for</code> loop (which affects each element within the array it's passed) into the function forEach. Voilà: functional programming makes basic iterators simpler to type in.
+              </p>
+                <figure>
+                  <pre>
+                  <code>function forEach(array, action) {
+                        for (var i = 0; i < array.length; i++)
+                          action(array[i]);
+                      }
+                  </code>
+                </pre>
+                  <figcaption>JavaScript's flair for functional programming:
+                    <br/>forEach function <em>from <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">Eloquent Javascript, ed. 1</a></em>
+                  </figcaption>
+                </figure>
+              <p>
+                In point of fact, JavaScript is a hybridized programming language that incorporates certain flexibilities of Object-Oriented Programming with the prescriptive nature of Functional Programming. I'm not nearly knowledgeable enough to say with certainty the dividing line between the two, but for now... I'll have to think of it as the best of both worlds.
+              </p>
+          </article>
+        </section>
     <footer>
       <p>Caroline Kenworthy &copy; 2015</p>
     </footer>
+  </div>
+  </div>
+</body>
 </html>
