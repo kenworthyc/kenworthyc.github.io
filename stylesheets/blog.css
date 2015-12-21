@@ -9,13 +9,17 @@ body background: #F1F2F0
 --------visited: #463E66
 */
 
+
 h1, h2, h4 {
   font-family: Fjalla One;
-  text-align: center;
 }
 
-p a:visited {
-  color: #FFCA85;
+li a:link {
+  color: #5D2C9E;
+}
+
+li a:visited {
+  color: #5D2C9E;
   text-decoration: line-through;
 }
 
@@ -35,15 +39,21 @@ figcaption {
   font-size: 10pt;
 }
 
-article ul, p {
+article p {
   text-indent: 25px;
   text-align: left;
 }
 
+ul {
+  text-align: left;
+  list-style-type: disc inside;
+}
+
 ol li {
+  font-family: Fjalla One;
   text-align: left;
   padding: .25em;
-  font-family: Lora;
-  color: #E38100;
+  list-style: decimal-leading-zero inside;
+
 }
 

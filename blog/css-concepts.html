@@ -6,62 +6,64 @@
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
 </head>
+<body>
+  <div id="gradient-bg">
+    <div id="body-bg">
+      <header>
+        <h3 id="name-text">Caroline<br>Kenworthy</h3>
+        <nav>
+          <a href="../index.html">home</a>
+          <a href="index.html">blog</a>
+          <a href="../about.html">about</a>
+          <a href="../projects/index.html">projects</a>
+        </nav>
+      </header>
+        <section>
+          <h1>CSS Positioning Values</h1>
+          <h4>11.8.2015</h4>
+          <article>
+            <h2>why positioning</h2>
+              <p>
+                When you lay out a design for a webpage— whether or not you already have aspirations for a font choice and and click actions— you have to understand its underlying structure. HTML will provide the page's content, but HTML and CSS work together to give the page its look, and its legibility for people.
 
-    <header>
-      <h3 id="name-text">Caroline<br>Kenworthy</h3>
-      <nav>
-        <ul>
-          <li><a href="../index.html">home</a></li>
-          <li><a href="index.html">blog</a></li>
-          <li><a href="../about.html">about</a></li>
-          <li><a href="../projects/index.html">projects</a></li>
-          <li><a href="../email.html">email me</a></li>
-        </ul>
-      </nav>
-    </header>
-<section>
-  <h1>CSS Positioning Values</h1>
-  <h4>11.8.2015</h4>
-  <article>
-    <h2>why positioning</h2>
-      <p>
-        When you lay out a design for a webpage— whether or not you already have aspirations for a font choice and and click actions— you have to understand its underlying structure. HTML will provide the page's content, but HTML and CSS work together to give the page its look, and its legibility for people.
-
-        Since humans understand visual information better when distinct topics are displayed separately, that's how most webpages are set up: organized into boxes. <b>Positioning puts all those boxes in order so we can understand it.</b>
-      </p>
-    <h2>the four values</h2>
-      <p>
-        Every CSS attribute is divided from its value with a colon and closed with a semicolon, like so: <b>attribute: value;</b>. Our relevant attribute, <b>position</b>, has 4 valid values:
-      </p>
-          <ol>
-            <li>static</li>
-            <li>relative</li>
-            <li>absolute</li>
-            <li>fixed</li>
-          </ol>
-        <h4>position: static;</h4>
-          <p>
-            Static positioning has also been called "normal flow" by <a href="http://www.htmlandcssbook.com">Jon Duckett</a>, for good reason: <b>static is the default value assigned to the position attribute.</b> You'll never <em>need</em> to type "position: static;" but it's good to remember that the linear layout of HTML is not changed by static positioning. Sidebar: This means that block-level elements (which get a line break) will have their own row, while inline elements will appear on the line of the previous element.
-          </p>
-        <h4>position: relative;</h4>
-          <p>
-           Relative positioning allows an element to be adjusted relative to its 'normal' position. Its location can be changed, but <b>the start point wil always be where the element would fall in static positioning.</b> By adjusting the margin, padding, or top-right-bottom-left attributes, the element will move accordingly from that start point.
-          </p>
-        <h4>position: absolute;</h4>
-          <p>
-           Absolute positioning will position an element <b>relative to its parent element's position.</b> The child copies the parent: by default, the top-left of an absolutely positioned element will coincide with the top-left of its parent element. To make use of the element's absolute positioning, attributes like margin, padding or top can be used to change the position (as in relative positioning).
-          </p>
-        <h4>position: fixed;</h4>
-          <p>
-           Fixed positioning is actually <b>a type of absolute positioning which takes the viewport as its 'parent' element</b>. Fixed-position elements do not move on the browser; other elements move under or around it.
-          </p>
-    <h2>structure and positioning</h2>
-      <p>
-       These four values for positioning your HTML elements create just about all webpages. Each value has its use. Fixed-position header bars (which stay visible at the top as you scroll down) are found from blogs to online stores to new sites; absolute, relative and static positioning spread visual interest all across the web. Tinker around and you'll find they can be infinitely, infuriatingly adjustable, and just as useful.
-      </p>
-  </article>
-</section>
-    <footer>
-      <p>Caroline Kenworthy &copy; 2015</p>
-    </footer>
-</html>
+                Since humans understand visual information better when distinct topics are displayed separately, that's how most webpages are set up: organized into boxes. <b>Positioning puts all those boxes in order so we can understand it.</b>
+              </p>
+            <h2>the four values</h2>
+              <p>
+                Every CSS attribute is divided from its value with a colon and closed with a semicolon, like so: <b>attribute: value;</b>. Our relevant attribute, <b>position</b>, has 4 valid values:
+              </p>
+                  <ol>
+                    <li>static</li>
+                    <li>relative</li>
+                    <li>absolute</li>
+                    <li>fixed</li>
+                  </ol>
+                <h4>position: static;</h4>
+                  <p>
+                    Static positioning has also been called "normal flow" by <a href="http://www.htmlandcssbook.com">Jon Duckett</a>, for good reason: <b>static is the default value assigned to the position attribute.</b> You'll never <em>need</em> to type "position: static;" but it's good to remember that the linear layout of HTML is not changed by static positioning. Sidebar: This means that block-level elements (which get a line break) will have their own row, while inline elements will appear on the line of the previous element.
+                  </p>
+                <h4>position: relative;</h4>
+                  <p>
+                   Relative positioning allows an element to be adjusted relative to its 'normal' position. Its location can be changed, but <b>the start point wil always be where the element would fall in static positioning.</b> By adjusting the margin, padding, or top-right-bottom-left attributes, the element will move accordingly from that start point.
+                  </p>
+                <h4>position: absolute;</h4>
+                  <p>
+                   Absolute positioning will position an element <b>relative to its parent element's position.</b> The child copies the parent: by default, the top-left of an absolutely positioned element will coincide with the top-left of its parent element. To make use of the element's absolute positioning, attributes like margin, padding or top can be used to change the position (as in relative positioning).
+                  </p>
+                <h4>position: fixed;</h4>
+                  <p>
+                   Fixed positioning is actually <b>a type of absolute positioning which takes the viewport as its 'parent' element</b>. Fixed-position elements do not move on the browser; other elements move under or around it.
+                  </p>
+            <h2>structure and positioning</h2>
+              <p>
+               These four values for positioning your HTML elements create just about all webpages. Each value has its use. Fixed-position header bars (which stay visible at the top as you scroll down) are found from blogs to online stores to new sites; absolute, relative and static positioning spread visual interest all across the web. Tinker around and you'll find they can be infinitely, infuriatingly adjustable, and just as useful.
+              </p>
+          </article>
+        </section>
+        <footer>
+          <p>Caroline Kenworthy &copy; 2015</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+  </html>
